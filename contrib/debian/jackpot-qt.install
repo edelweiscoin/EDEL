@@ -1,0 +1,6 @@
+usr/local/bin/edelweis-qt usr/bin
+share/pixmaps/edelweis32.xpm usr/share/pixmaps
+share/pixmaps/edelweis16.xpm usr/share/pixmaps
+share/pixmaps/edelweis128.png usr/share/pixmaps
+debian/edelweis-qt.desktop usr/share/applications
+debian/edelweis-qt.protocol usr/share/kde4/services/
