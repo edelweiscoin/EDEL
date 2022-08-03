@@ -42,5 +42,5 @@ Links:
 
 • [Twitter](https://twitter.com/Edelweiscoin)
 
-• [Discord](https://discord.edelweis.org/)
+• [Discord](https://discord.gg/arxX6PjrJ2)
 
