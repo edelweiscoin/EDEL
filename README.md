@@ -36,7 +36,7 @@ Specifications:
 Links:
 ==================
 
-• [Explorer](https://explorer.edelweis.io/)
+• [Explorer](https://explorer.edelweis.org/)
 
 • [Website](https://edelweis.org/)
 
