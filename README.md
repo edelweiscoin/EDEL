@@ -21,17 +21,15 @@ Specifications:
 
 • PoS Blocks:       Starting from 1001  
 
-• Premine:          9,980,000 EDEL
+• Premine:          10,000,000 EDEL
 
-• Maturity:         100 Confirmations  
-
-• Max Supply:       101,103,990 EDEL
+• Maturity:         100 Confirmations 
 
 ---
 
 • 51% attacks resistant
 
-• Prefix: EDEL adresses start with "M"  
+• Prefix: EDEL adresses start with "E"  
 
 ---
 
