@@ -900,5 +900,5 @@ UniValue getcollateral(const JSONRPCRequest& request)
             "\nExamples:\n" +
             HelpExampleCli("getcollateral", "") + HelpExampleRpc("getcollateral", ""));
 
-    return ValueFromAmount(GetMasternodeNodeCollateral(chainActive.Height()));
+    return ValueFromAmount(CMasternode::GetMasternodeNodeCollateral(chainActive.Height()));
 }
