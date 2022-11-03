@@ -287,6 +287,7 @@ extern UniValue listmasternodeconf(const JSONRPCRequest& request);
 extern UniValue getmasternodestatus(const JSONRPCRequest& request);
 extern UniValue getmasternodewinners(const JSONRPCRequest& request);
 extern UniValue getmasternodescores(const JSONRPCRequest& request);
+extern UniValue getcollateral(const JSONRPCRequest& request);
 
 extern UniValue preparebudget(const JSONRPCRequest& request); // in rpc/budget.cpp
 extern UniValue submitbudget(const JSONRPCRequest& request);

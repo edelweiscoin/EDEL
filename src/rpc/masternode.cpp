@@ -5,6 +5,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "activemasternode.h"
+#include "masternode.h"
 #include "db.h"
 #include "init.h"
 #include "main.h"
@@ -884,4 +885,20 @@ UniValue relaymasternodebroadcast(const JSONRPCRequest& request)
     mnb.Relay();
 
     return strprintf("Masternode broadcast sent (service %s, vin %s)", mnb.addr.ToString(), mnb.vin.ToString());
+}
+
+UniValue getcollateral(const JSONRPCRequest& request)
+{
+    if (request.fHelp || (params.size() != 0))
+        throw std::runtime_error(
+            "getcollateral\n"
+            "\nPrint the amount of coins currently required as a masternode collateral\n"
+
+            "\nResult:\n"
+            "\"status\"     (numeric) Masternode collateral value right now\n"
+
+            "\nExamples:\n" +
+            HelpExampleCli("getcollateral", "") + HelpExampleRpc("getcollateral", ""));
+
+    return ValueFromAmount(GetMasternodeNodeCollateral(chainActive.Height()));
 }
