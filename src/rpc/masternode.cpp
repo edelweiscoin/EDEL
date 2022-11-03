@@ -889,7 +889,7 @@ UniValue relaymasternodebroadcast(const JSONRPCRequest& request)
 
 UniValue getcollateral(const JSONRPCRequest& request)
 {
-    if (request.fHelp || (params.size() != 0))
+    if (request.fHelp || (request.params.size() != 0))
         throw std::runtime_error(
             "getcollateral\n"
             "\nPrint the amount of coins currently required as a masternode collateral\n"
