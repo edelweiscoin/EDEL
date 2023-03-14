@@ -93,6 +93,8 @@ UniValue listmasternodes(const JSONRPCRequest& request)
             obj.push_back(Pair("lastseen", (int64_t)mn->lastPing.sigTime));
             obj.push_back(Pair("activetime", (int64_t)(mn->lastPing.sigTime - mn->sigTime)));
             obj.push_back(Pair("lastpaid", (int64_t)mn->GetLastPaid()));
+            obj.push_back(Pair("lastpaidblock", (int64_t)mn->GetLastPaidBlock()));
+            obj.push_back(Pair("netaddr", mn->addr.ToString()));
 
             ret.push_back(obj);
         }
@@ -884,4 +886,20 @@ UniValue relaymasternodebroadcast(const JSONRPCRequest& request)
     mnb.Relay();
 
     return strprintf("Masternode broadcast sent (service %s, vin %s)", mnb.addr.ToString(), mnb.vin.ToString());
+}
+
+UniValue getcollateral(const JSONRPCRequest& request)
+{
+    if (request.fHelp || (request.params.size() != 0))
+        throw std::runtime_error(
+            "getcollateral\n"
+            "\nPrint the amount of coins currently required as a masternode collateral\n"
+
+            "\nResult:\n"
+            "\"status\"     (numeric) Masternode collateral value right now\n"
+
+            "\nExamples:\n" +
+            HelpExampleCli("getcollateral", "") + HelpExampleRpc("getcollateral", ""));
+
+    return ValueFromAmount(CMasternode::GetMasternodeNodeCollateral(chainActive.Height()));
 }
